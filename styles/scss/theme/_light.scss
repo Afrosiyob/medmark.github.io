@@ -1,0 +1,17 @@
+@mixin theme-light {
+    --primary-color-blue: rgb(24, 63, 115);
+    --primary-color-red: rgb(209, 47, 31);
+    --primary-color-white: rgb(255, 255, 255);
+}
+
+
+@mixin theme-text {
+    --text-grey: rgb(81, 81, 81);
+    --text-black: rgb(0, 0, 0);
+}
+
+@mixin theme-bg {
+    --bg-white: rgb(255, 255, 255);
+    --bg-blue: rgba(0, 0, 255, 0.274);
+    --bg-grey: rgba(166, 166, 166, 0.291);
+}

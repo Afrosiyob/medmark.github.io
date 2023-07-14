@@ -1,0 +1,99 @@
+@import "../utils/mixins";
+
+.language__dropdown {
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+
+
+    .language__dropdown__header {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 4px;
+
+        .globe__icon {
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    .language__dropdown__content {
+        padding-top: 5px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        z-index: 99999;
+        left: 0;
+        @include transition_all;
+
+        .language__dropdown__content__body {
+
+            height: 200px;
+            overflow-y: auto;
+            width: 100px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.2);
+
+            background-color: var(--primary-color-white);
+
+            .language__dropdown__content__body__list__ul {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                margin: 0;
+                padding: 4px;
+                gap: 4px;
+
+                .language__dropdown__content__body__list__li {
+                    a {
+                        padding: 0 4px;
+                        text-decoration: none;
+                        display: block;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: var(--text-grey);
+                        @include transition_all;
+                        text-transform: capitalize;
+                        border-radius: 2px;
+
+                        &:hover {
+                            color: var(--text-black);
+                            background-color: aliceblue;
+                        }
+                    }
+
+                    &+.active {
+                        a {
+                            color: var(--text-black);
+                            background-color: aliceblue;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .language__dropdown__content {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+}

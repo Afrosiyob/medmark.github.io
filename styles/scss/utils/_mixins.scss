@@ -1,0 +1,56 @@
+@mixin transition_all {
+    transition: all 0.2s linear;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@mixin box_shadow {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin media($val) {
+    @media all and (max-width: $val) {
+        @content;
+    }
+}
+
+@mixin media_sm {
+    @media all and (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin media_md {
+    @media all and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media_lg {
+    @media all and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media_xl {
+    @media all and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media_xxl {
+    @media all and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin unify_parent($child) {
+    @at-root #{selector.unify(&, $child)} {
+        @content;
+    }
+}
