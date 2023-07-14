@@ -1,0 +1,19 @@
+@import "./components/button";
+@import "./components/language";
+
+@import "./layout/footer";
+@import "./layout/header";
+
+@import "./pages/index";
+@import "./pages/home";
+
+@import "./theme/light";
+
+@import "./utils/mixins";
+@import "./utils/variables";
+
+:root {
+    @include theme-light;
+    @include theme-text;
+    @include theme-bg;
+}
